@@ -21,10 +21,18 @@ jobs:
       - name: Print current version
         run: go test ./... -cover
 
-      - name: Debug gofmt
-        run: |
-          echo "Running: go fmt ./..."
-          go fmt ./... || echo "gofmt exit code: $?"
+   style:
+    name: Style
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.25.1"
 
       - name: Check formatting
         run: test -z "$(go fmt ./...)"  
