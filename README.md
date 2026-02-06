@@ -1,4 +1,4 @@
-https://github.com/krasnopolska/learn-cicd-starte/actions/workflows/ci.yml/badge.sv
+https://github.com/krasnopolska/learn-cicd-starte/actions/workflows/ci.yml/badge.svg
 ![alt text goes here](IMAGE_URL)
 # learn-cicd-starter (Notely)
 
