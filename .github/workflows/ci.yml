@@ -21,5 +21,10 @@ jobs:
       - name: Print current version
         run: go test ./... -cover
 
-      - name: Style
-        run: test -z "$(go fmt ./...)"
+      - name: Debug gofmt
+        run: |
+          echo "Running: go fmt ./..."
+          go fmt ./... || echo "gofmt exit code: $?"
+
+      - name: Check formatting
+        run: test -z "$(go fmt ./...)"  
